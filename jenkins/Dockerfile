@@ -2,8 +2,9 @@ FROM jenkins/jenkins:lts-jdk11
 
 MAINTAINER malachai<prussian1933@naver.com>
 
+USER root
+
 RUN \
-    su root && \
     apt-get update && \
     apt-get install ca-certificates curl gnupg lsb-release -y && \
     mkdir -p /etc/apt/keyrings && \
